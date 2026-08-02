@@ -1,4 +1,11 @@
-# UnrealDbg 项目详细介绍
+# UnrealVTDbg
+
+> [!IMPORTANT]
+> **Research context:** UnrealVTDbg is a VT-x/EPT-assisted Windows kernel
+> debugging project for authorized anti-cheat engineering, defensive security,
+> and reverse-engineering research. Some legacy documentation below retains
+> offensive terminology from its original research context. This repository is
+> not intended to enable cheating or unauthorized access.
 
 
 本项目是一个基于 VT（Intel Virtualization Technology）技术构建的调试体系，旨在突破游戏驱动的反调试机制。项目的用户界面使用 Delphi 编写，提供了直观、便捷的操作体验；核心代码则采用 C++ 编写，利用 VT 技术的强大功能实现对游戏驱动的调试。
