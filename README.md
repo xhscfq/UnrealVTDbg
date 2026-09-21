@@ -1,3 +1,5 @@
+
+
 # UnrealVTDbg
 
 > [!IMPORTANT]
@@ -56,7 +58,7 @@ UnrealDbg 是一个旨在突破游戏驱动反调试机制的自建调试体系�
     - `D_encryption.dproj`：Delphi 项目配置文件，包含编译选项、依赖项等信息。
     - `D_encryption.dproj.local`：本地项目配置文件，包含开发者本地个性化配置。
     - `D_encryption.res`：Delphi 资源文件，包含图标、菜单等资源信息。
-- **加密算法**：可能使用了 Blowfish 等加密算法，对敏感数据（如卡密、调试信息等）进行加密。
+- **加密算法**：可能使用了 Blowfish 等加密算法，对敏感数据（如卡密、调试信息等）进行加密，相关实现位于 `Common/Encrypt/Blowfish/Blowfish.cpp`。
 
 ### （四）DbgkSysWin10 和 DbgkSysWin11 模块
 分别针对 Windows 10 和 Windows 11 系统设计的调试相关模块，提供一系列用于调试操作的接口和功能实现，有助于突破游戏驱动反调试机制。
@@ -129,12 +131,12 @@ NTSTATUS DriverEntry(_In_ PDRIVER_OBJECT DriverObject, _In_ PUNICODE_STRING Regi
             outDebug("Vmm initialization failed");
             return STATUS_UNSUCCESSFUL;
         }
-        outDebug("�������سɹ�!!!\n");
+        outDebug("???????????!!!\n");
     }
     else
     {
         nStatus = STATUS_UNSUCCESSFUL;
-        outDebug("��������ʧ��!!!\n");
+        outDebug("???????????!!!\n");
     }
     return nStatus;
 }
